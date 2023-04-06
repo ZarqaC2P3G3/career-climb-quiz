@@ -1,0 +1,84 @@
+body {
+  background-color: #e9f1f9;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+}
+
+@media (max-width = 776px) {
+  main {
+    height: 20vh;
+  }
+}
+
+main .main-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
+main .main-container .stprogress-line {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+}
+
+main .main-container .stprogress-line {
+  height: 8px;
+  border-radius: 100px;
+}
+
+main .main-container .ndprogress-line {
+  height: 8px;
+  background-color: #0d9bd2;
+  border-radius: 100px;
+}
+
+.choice {
+  /* font-size: 20px; */
+  border: 2px solid #26b2e8;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  height: 60px;
+  /* padding: 10px; */
+  padding-top: 10px ;
+  padding-left: 2rem;
+}
+
+
+.container-button button {
+  background-color: #0d9bd2;
+  color: #ffffff;
+}
+
+input[type="radio"] {
+  opacity: 1;
+  position: relative;
+}
+
+input[type="radio"]::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+}
+
+input[type="radio"]:checked::before {
+  background-color: #1e90ff;
+  border-color: #1e90ff;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+}
