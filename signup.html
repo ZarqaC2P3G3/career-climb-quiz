@@ -10,7 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-        
+
 
 </head>
 
@@ -41,7 +41,7 @@
                                             <div class="form-outline flex-fill mb-0">
                                                 <label class="form-label" for="form3Example3c">Email</label>
                                                 <input type="email" id="form3Example3c" class="form-control" />
-                                                
+
                                             </div>
                                         </div>
 
@@ -55,16 +55,17 @@
 
                                         <!-- Choose the Quiz -->
                                         <div class="dropdown mb-5">
-                                            <button class="btn dropdown-toggle w-100 mt-4 dropdownBtn" type="button" id="dropdownMenuButton"
-                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Choose the Quiz
+                                            <button class="btn dropdown-toggle w-100 mt-4 dropdownBtn" type="button"
+                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"> Choose the Quiz
+                                                <span id="chosenItem"></span>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                              </ul>
-                                          </div>
+                                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('JavaScript')">JavaScript</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('CSS')">CSS</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="updateButtonText('HTML')">HTML</a></li>
+                                            </ul>
+                                        </div>
 
                                         <div class="form-check d-flex  mb-5">
                                             <input class="form-check-input me-2" type="checkbox" value=""
@@ -75,7 +76,8 @@
                                         </div>
 
                                         <div class="d-flex justify-content-center ">
-                                            <button type="button" class="btn btn-info w-100" style="background-color: #0a89b8;">Register</button>
+                                            <button type="button" class="btn btn-info w-100"
+                                                style="background-color: #0a89b8;">Sign up</button>
                                         </div>
 
                                     </form>
@@ -83,8 +85,7 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="img\login.png"
-                                        class="img-fluid" alt="Sample image">
+                                    <img src="img\login.png" class="img-fluid" alt="Sample image">
 
                                 </div>
                             </div>
@@ -95,11 +96,18 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    <script>
+
+        function updateButtonText(text) {
+            document.querySelector('.dropdownBtn').innerHTML = text;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
 </body>
 
