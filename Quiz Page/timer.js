@@ -14,10 +14,7 @@ const timerInterval = setInterval(() => {
     updateTimerDisplay(timeRemaining);
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
-      setTimeout(() => {
-        window.location.href = "/Results Page/results_Fail.html"; // replace "next-page.html" with the URL of the next HTML page you want to navigate to
-      }, 1000);
-   
+        window.location.href = "/Results Page/results_Fail.html"; 
     }
   }, 1000);
 
