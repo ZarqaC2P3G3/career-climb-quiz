@@ -13,8 +13,8 @@ const timerInterval = setInterval(() => {
     updateTimerDisplay(timeRemaining);
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
-      // handle end of quiz here
-    }
+      window.location.href = "/Results Page/results_Fail.html";
+        }
   }, 1000);
 
   function startQuiz() {
