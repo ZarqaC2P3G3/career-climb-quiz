@@ -37,14 +37,14 @@ function renderQuestion(container, question, answers) {
   });
 }
 
-signup.addEventListener("submit", (event) => {
-  event.preventDefault();
+// signup.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  userInfo.userName = event.target.username;
-  userInfo.userEmail = event.target.useremail;
-  userInfo.userPassword = event.target.userpassword;
-  userInfo.userPosition = event.target.userposition;
-});
+//   userInfo.userName = event.target.username;
+//   userInfo.userEmail = event.target.useremail;
+//   userInfo.userPassword = event.target.userpassword;
+//   userInfo.userPosition = event.target.userposition;
+// });
 
 quiz.addEventListener("submit", (event) => {
   event.preventDefault();
