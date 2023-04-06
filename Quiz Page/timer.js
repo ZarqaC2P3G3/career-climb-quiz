@@ -6,6 +6,7 @@ function updateTimerDisplay(timeRemaining) {
   const minutes = Math.floor(timeRemaining / 60);
   const seconds = timeRemaining % 60;
   timerDisplay.textContent = `${minutes}m : ${seconds}s`;
+
 }
 
 const timerInterval = setInterval(() => {
@@ -13,7 +14,10 @@ const timerInterval = setInterval(() => {
     updateTimerDisplay(timeRemaining);
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
-      // handle end of quiz here
+      setTimeout(() => {
+        window.location.href = "/Results Page/results_Fail.html"; // replace "next-page.html" with the URL of the next HTML page you want to navigate to
+      }, 1000);
+   
     }
   }, 1000);
 
