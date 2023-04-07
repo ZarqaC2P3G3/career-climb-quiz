@@ -549,9 +549,9 @@ quiz.addEventListener("submit", (event) => {
 
     sessionStorage.setItem("score", `${score}`);
     if (score > 5) {
-      window.location.href = "../../Results Page/results_Success.html";
+      window.location.href = "../html/Results Page/resultsSuccess.html";
     } else {
-      window.location.href = "../../Results Page/results_Fail.html";
+      window.location.href = "../html/Results Page/resultsFail.html";
     }
   }
   if (currentQuestion !== 10) {

@@ -78,6 +78,7 @@ form.addEventListener("submit", function (e) {
     users.push(usersInfo);
     localStorage.setItem("users", JSON.stringify(users));
 
+    window.location.href = "../html/welcome/welcomePage.html";
   } else {
     alert("User Already exists");
   }
