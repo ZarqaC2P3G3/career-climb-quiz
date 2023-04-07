@@ -27,7 +27,9 @@
       <div class="container main-container col-xxl-8 px-4 py-5 bg-light">
         <div class="container stprogress-line bg-black opacity-75">
           <div
-            class="container ndprogress-line opacity-75 w-50 position-absolute p-0 start-0"
+            id="progressBar"
+            class="container ndprogress-line opacity-75 position-absolute p-0 start-0"
+            style="width: 10%"
           ></div>
         </div>
         <div class="container mt-xl-5">
@@ -35,15 +37,16 @@
             class="container d-flex justify-content-between"
             style="margin-top: 5rem"
           >
-            <span>Question 1 / 10</span><span id="timer"></span>
+            <span>Question <span id="questionNumber">1</span> / 10</span
+            ><span id="timer"></span>
           </div>
           <div class="q-body container mt-5 mb-5">
             <div class="container text-center fs-3 mt-5">
-              <span class="fs-3 fw-semibold">
+              <span class="fs-3 fw-semibold" id="questionTitle">
                 printing and typesetting industry. Lorem Ipsum ?</span
               >
             </div>
-            <form>
+            <form id="quiz">
               <div class="form container my-5">
                 <div class="choice form-check">
                   <input
@@ -51,7 +54,7 @@
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios1"
-                    value="option1"
+                    value="1"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     printing and typesetting industry. Lorem Ipsum
@@ -63,7 +66,7 @@
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios2"
-                    value="option2"
+                    value="2"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     printing and typesetting industry. Lorem Ipsum
@@ -75,7 +78,7 @@
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
-                    value="option3"
+                    value="3"
                   />
                   <label class="form-check-label" for="exampleRadios3">
                     printing and typesetting industry. Lorem Ipsum
@@ -87,7 +90,7 @@
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios4"
-                    value="option4"
+                    value="4"
                   />
                   <label class="form-check-label" for="exampleRadios4">
                     printing and typesetting industry. Lorem Ipsum
@@ -96,7 +99,6 @@
 
                 <!-- //////////////////// -->
                 <!-- <div class="choice container for">
-
                 printing and typesetting industry. Lorem Ipsum
               </div>
               <div class="choice container">
@@ -111,19 +113,33 @@
                 <i class="fa-regular fa-circle"></i>
                 printing and typesetting industry. Lorem Ipsum
               </div> -->
-              <div
-                class="container-button container d-flex flex-row justify-content-center mt-5"
-              >
-                <button type="submit" class="btn">Next Question</button>
-              </div>
+                <div
+                  class="container-button container d-flex flex-row justify-content-center mt-5"
+                >
+                  <button type="submit" class="btn" id="nextButton">
+                    Next Question
+                  </button>
+
+                  <button class="btn d-none" id="submitButton">
+                    <a
+                      id="submitLink"
+                      href="../Results Page/results_Success.html"
+                      style="text-decoration: none; color: white"
+                      >Submit</a
+                    >
+                  </button>
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
     </main>
+    <script src="../src/js/app.js"></script>
   </body>
+  <<<<<<< HEAD =======
   <script src="./timer.js"></script>
+  >>>>>>> 6fc450a84d4e4372d0784031ff521dac31b75781
   <script
     type="module"
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
