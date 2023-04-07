@@ -39,15 +39,63 @@
           </div>
           <div class="q-body container mt-5 mb-5">
             <div class="container text-center fs-3 mt-5">
-              <span class="fs-3 fw-semibold">
+              <span class="fs-3 fw-semibold" id="questionTitle">
                 printing and typesetting industry. Lorem Ipsum ?</span
               >
             </div>
-            
+            <form id="quiz">
+              <div class="form container my-5">
+                <div class="choice form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios1"
+                    value="1"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    printing and typesetting industry. Lorem Ipsum
+                  </label>
+                </div>
+                <div class="choice form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios2"
+                    value="2"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    printing and typesetting industry. Lorem Ipsum
+                  </label>
+                </div>
+                <div class="choice form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios3"
+                    value="3"
+                  />
+                  <label class="form-check-label" for="exampleRadios3">
+                    printing and typesetting industry. Lorem Ipsum
+                  </label>
+                </div>
+                <div class="choice form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios4"
+                    value="4"
+                  />
+                  <label class="form-check-label" for="exampleRadios4">
+                    printing and typesetting industry. Lorem Ipsum
+                  </label>
+                </div>
 
                 <!-- //////////////////// -->
                 <!-- <div class="choice container for">
-
                 printing and typesetting industry. Lorem Ipsum
               </div>
               <div class="choice container">
@@ -62,34 +110,46 @@
                 <i class="fa-regular fa-circle"></i>
                 printing and typesetting industry. Lorem Ipsum
               </div> -->
-              <div
-                class="container-button container d-flex flex-row justify-content-center mt-5"
-              >
-                <button type="submit" class="btn">Next Question</button>
-              </div>
+                <div
+                  class="container-button container d-flex flex-row justify-content-center mt-5"
+                >
+                  <button type="submit" class="btn" id="nextButton">
+                    Next Question
+                  </button>
+
+                  <button class="btn d-none" id="submitButton">
+                    <a
+                      id="submitLink"
+                      href=""
+                      style="text-decoration: none; color: white"
+                      >Submit</a
+                    >
+                  </button>
+                </div>
               </div>
             </form>
           </div>
         </div>
       </div>
     </main>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/f834d0470b.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="../src/js/app.js"></script>
   </body>
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/f834d0470b.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
