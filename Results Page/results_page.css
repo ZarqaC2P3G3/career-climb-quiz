@@ -1,0 +1,9 @@
+body{
+    background-color: #eee;
+    background-image: url('./img/background_image.jpg');
+    background-size: 100% 100%;
+}
+.results-card span{
+ font-size: 36px;
+ font-weight: 600;
+}

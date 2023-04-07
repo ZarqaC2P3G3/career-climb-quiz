@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./results_page.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container">
+                <a class="navbar-brand" href="#">CCQ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-4" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-4" href="#">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-4" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-info mr-2 mx-4" style="
+                /* font-weight: bold; */
+                background: transparent;
+                border: solid 1px #0a89b8;
+                color: #444;
+              ">
+                        Logout
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container rounded-4 p-4"
+            style=" background-color: rgba(255, 255, 255, 0.5);  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div  class="container  rounded-4 mt-3 p-5 d-flex justify-content-start"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 95%;height: 15rem; background-color: #A21B1E;"><span
+                    style="position: relative ; bottom: 2vh; font-size: 10vh; font-weight:600; ">JavaScript <sub
+                        style=" font-size: 5vh; color: white;">Fail</sub> </span></div>
+            <p class="my-5" style="text-align: center;">This is a summary about the quiz that should go here here goes a
+                summary summary summary summary</p>
+
+
+            <div class="row gap-4 results-card mx-3 justify-content-center">
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #4D0F0F ;color: white">Final Score<br> <br><span id="finalScore"> 22%</span></div>
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #A21B1E  ;color: white;">Time Spent <br> <br> <span> 5:23</span></div>
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #65B87E ; color: white;">Correct Answers <br> <br><span id="correctAnswers">2/10</span></div>
+            </div>
+            <!-- -----------------------------------saaied -------------------------------------------- -->
+
+            <!-- --------------------------------------------------------------------------------------------- -->
+            <div></div>
+
+
+            <div class="container-sm mt-5 rounded-4 mb-4 ">
+                <div class="accordion w-75 mx-auto" id="accordionExample">
+                    <h2>Review answers</h2>
+                    <!-- <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Question Number 1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Question Title</strong>
+                                <br>
+                                <span>Answer: b Answer body</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Question Number 2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Question Title</strong>
+                                <br>
+                                <span>Answer: b Answer body</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Question Number 3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Question Title</strong>
+                                <br>
+                                <span>Answer: b Answer body</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Question Number 4
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Question Title</strong>
+                                <br>
+                                <span>Answer: b Answer body</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Question Number 5
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Question Title</strong>
+                                <br>
+                                <span>Answer: b Answer body</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>  -->
+    </main>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary fw-bold">Career Climb Quiz</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-center list-unstyled d-flex mx-auto ">
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#"><ion-icon style="font-size: 28px"
+                            name="logo-twitter"></ion-icon></a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#"><ion-icon style="font-size: 28px"
+                            name="logo-pinterest"></ion-icon></a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#"><ion-icon style="font-size: 28px"
+                            name="logo-facebook"></ion-icon></a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-body-secondary" href="#"><ion-icon style="font-size: 28px"
+                            name="logo-instagram"></ion-icon></a>
+                </li>
+            </ul>
+            <div class="col-md-4 d-flex align-items-end justify-content-end">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f834d0470b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./results_Page.js"></script>
+</body>
+
+</html>
