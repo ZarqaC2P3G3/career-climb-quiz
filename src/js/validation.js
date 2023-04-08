@@ -7,6 +7,7 @@ let checkboxError = document.getElementById("checkboxError");
 let selectedValue;
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 let valid = true;
+let exists = false;
 let users = [];
 
 if (localStorage.getItem("users")) {
@@ -52,7 +53,7 @@ form.addEventListener("submit", function (e) {
 
   users.forEach((element) => {
     if (element.email === email) {
-      valid = false;
+      exists = true;
     }
   });
 
@@ -73,14 +74,15 @@ form.addEventListener("submit", function (e) {
     positionError.style.display = "none";
   }
 
-  if (valid) {
+  if (valid && !exists) {
     let usersInfo = new object(name, password, email, selectedValue);
     users.push(usersInfo);
     localStorage.setItem("users", JSON.stringify(users));
-
-    window.location.href = "../html/welcome/welcomePage.html";
-  } else {
+    window.location.href = "../welcome/welcomePage.html";
+  }
+  if(exists){
     alert("User Already exists");
+    exists = false;
   }
   form.reset();
 });
