@@ -60,17 +60,17 @@
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img style="box-shadow: 0 0 100px rgb(246, 241, 177);" src="../../../img/javascript-logo-new.png"
+          <img id="quizImage" style="box-shadow: 0 0 100px rgb(246, 241, 177);" src="../../../img/javascript-logo-new.png"
             class="d-block mx-lg-auto img-fluid  " alt="Bootstrap Themes" width="150" height="500" loading="lazy" />
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3">
-            Wellcome, user!
+            <span> Welcome, <span id="userName">user</span>!</span>
             <br><br>
             <h1 class="display-6 lh-1 mb-2">
-              About javascript quiz
+              About <span id="position">javascript</span> quiz
             </h1>
-            <p class="lead mt-3">The JS Multiple Choice Quiz is a web-based platform designed to test your knowledge of
+            <p class="lead mt-3" id="positionBrief">The JS Multiple Choice Quiz is a web-based platform designed to test your knowledge of
               JavaScript. The quiz features a series of multiple-choice questions, covering various topics such as
               syntax, data types, functions, and more. The questions range in difficulty from beginner to advanced,
               allowing users to test their skills at various levels.</p>
@@ -135,6 +135,7 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/f834d0470b.js" crossorigin="anonymous"></script>
+  <script src="../../js/welcomePage.js"></script>
 </body>
 
 </html>

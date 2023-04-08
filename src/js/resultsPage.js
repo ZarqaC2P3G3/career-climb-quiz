@@ -21,19 +21,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
   </div>
 </div>`;
 
+  const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
+
+  const userInfo = {
+    userName: "",
+    userEmail: "",
+    userPassword: "",
+    userPosition: loggedInUser.selectedValue.toLowerCase(),
+  };
+
+  const positionContainer = document.getElementById("position");
+  const summaryContainer = document.getElementById("summary");
+
+  positionContainer.textContent = userInfo.userPosition;
+  summaryContainer.textContent = `The ${userInfo.userPosition} Multiple Choice Quiz is a web-based platform designed to test your knowledge of ${userInfo.userPosition}.`;
+
   document.getElementById("finalScore").textContent = `${Math.floor(
     (userScore / 10) * 100
   )}%`;
 
   document.getElementById("correctAnswers").textContent = `${userScore}/10`;
 
+  const timeRemaining = JSON.parse(sessionStorage.getItem("timeLeft"));
+
+  const minutes = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
+  document.getElementById(
+    "timeRemaning"
+  ).textContent = `${minutes}m : ${seconds}s`;
+
   questionData.forEach((element, index) => {
     let correct;
     if (+questionData[index].questionAnswer === +userAnswers[index] - 1) {
       correct = true;
-      console.log(+questionData[index].questionAnswer, +userAnswers[index]);
+      // console.log(+questionData[index].questionAnswer, +userAnswers[index]);
     } else {
-      console.log(+questionData[index].questionAnswer, +userAnswers[index]);
+      // console.log(+questionData[index].questionAnswer, +userAnswers[index]);
       correct = false;
     }
 
