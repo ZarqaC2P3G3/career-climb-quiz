@@ -440,7 +440,7 @@ const quizzes = {
   },
 };
 
-const timelimit = 10;
+const timelimit = 300;
 let timeRemaining = timelimit;
 
 function updateTimerDisplay(timeRemaining) {
