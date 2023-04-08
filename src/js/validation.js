@@ -6,6 +6,7 @@ let positionError = document.getElementById("positionError");
 let checkboxError = document.getElementById("checkboxError");
 let selectedValue;
 const dropdownItems = document.querySelectorAll(".dropdown-item");
+let loggedInUser;
 let valid = true;
 let exists = false;
 let users = [];
@@ -78,9 +79,13 @@ form.addEventListener("submit", function (e) {
     let usersInfo = new object(name, password, email, selectedValue);
     users.push(usersInfo);
     localStorage.setItem("users", JSON.stringify(users));
+
+    sessionStorage.setItem("loggedInUser", JSON.stringify(usersInfo));
+
     window.location.href = "../welcome/welcomePage.html";
-  }
-  if(exists){
+  } else {
+    console.log(valid);
+
     alert("User Already exists");
     exists = false;
   }

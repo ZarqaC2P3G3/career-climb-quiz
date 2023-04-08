@@ -32,7 +32,7 @@
                       Login
                     </p>
 
-                    <form class="mx-1 mx-md-4">
+                    <form class="mx-1 mx-md-4" id="form">
                       <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div class="form-outline flex-fill mb-0">
@@ -41,7 +41,8 @@
                           >
                           <input
                             type="email"
-                            id="form3Example3c"
+                            id="email"
+                            name="email"
                             class="form-control"
                           />
                         </div>
@@ -55,7 +56,8 @@
                           >
                           <input
                             type="password"
-                            id="form3Example4c"
+                            id="password"
+                            name="password"
                             class="form-control"
                           />
                         </div>
@@ -86,6 +88,7 @@
                           <li>
                             <a
                               class="dropdown-item"
+                              data-value="javascript"
                               href="#"
                               onclick="updateButtonText('JavaScript')"
                               >JavaScript</a
@@ -95,6 +98,7 @@
                             <a
                               class="dropdown-item"
                               href="#"
+                              data-value="css"
                               onclick="updateButtonText('CSS')"
                               >CSS</a
                             >
@@ -102,6 +106,7 @@
                           <li>
                             <a
                               class="dropdown-item"
+                              data-value="html"
                               href="#"
                               onclick="updateButtonText('HTML')"
                               >HTML</a
@@ -113,6 +118,7 @@
                       <div class="d-flex justify-content-center">
                        <a href="../welcome/welcomePage.html">
                         <button
+<<<<<<< HEAD
                         type="button"
                         class="btn btn-info w-100"
                         style="background-color: #0a89b8"
@@ -121,6 +127,14 @@
                       </button>
                        </a>
                         
+=======
+                          type="submit"
+                          class="btn btn-info w-100"
+                          style="background-color: #0a89b8"
+                        >
+                          Login
+                        </button>
+>>>>>>> c5dd0fd1037c11178c2610a8db47528832797f5e
                       </div>
 
                       <div class="d-flex flex-column mb-5 align-items-center">
@@ -172,5 +186,8 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
+
+    <script src="../../js/login.js"></script>
+    <!-- <script src="../../js/login.js"></script> -->
   </body>
 </html>
