@@ -440,11 +440,42 @@ const quizzes = {
   },
 };
 
+const timelimit = 300;
+let timeRemaining = timelimit;
+
+function updateTimerDisplay(timeRemaining) {
+  const timerDisplay = document.getElementById("timer");
+  const minutes = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
+  timerDisplay.textContent = `${minutes}m : ${seconds}s`;
+}
+
+const timerInterval = setInterval(() => {
+  timeRemaining--;
+  updateTimerDisplay(timeRemaining);
+  sessionStorage.setItem("timeLeft", JSON.stringify(timelimit - timeRemaining));
+  if (timeRemaining <= 0) {
+    clearInterval(timerInterval);
+    window.location.href = "../Results Page/resultsFail.html";
+    sessionStorage.setItem(
+      "timeRemaining",
+      JSON.stringify(timelimit - timeRemaining)
+    );
+  }
+}, 1000);
+
+function startQuiz() {
+  // start the quiz
+  timerInterval;
+}
+
+const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
+
 const userInfo = {
   userName: "",
   userEmail: "",
   userPassword: "",
-  userPosition: "html",
+  userPosition: loggedInUser.selectedValue.toLowerCase(),
 };
 
 let answers = [];
@@ -540,23 +571,23 @@ quiz.addEventListener("submit", (event) => {
   if (currentQuestion === 9) {
     document.getElementById("nextButton").textContent = "Submit";
   }
+
+  console.log(answers, scoreData);
+
+  console.log(score);
+  sessionStorage.setItem("userAnswers", JSON.stringify(answers));
+  sessionStorage.setItem("questionData", JSON.stringify(scoreData));
   if (currentQuestion === 10) {
     // document.getElementById("submitButton").classList.toggle("d-none");
-
-    sessionStorage.setItem("userAnswers", JSON.stringify(answers));
-    sessionStorage.setItem("questionData", JSON.stringify(scoreData));
     calculateResult();
-
     sessionStorage.setItem("score", `${score}`);
     if (score > 5) {
-      window.location.href = "../html/Results Page/resultsSuccess.html";
+      window.location.href = "../Results Page/resultsSuccess.html";
     } else {
-      window.location.href = "../html/Results Page/resultsFail.html";
+      window.location.href = "../Results Page/resultsFail.html";
     }
   }
   if (currentQuestion !== 10) {
     currentQuestion++;
   }
 });
-
-document.getElementById("submitLink").addEventListener("click", (event) => {});
