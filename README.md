@@ -12,10 +12,10 @@ Career Climb Quiz a quiz website that will evaluate candidates' knowledge and sk
 
 ## technologies used
 
--vscode
--html
--css
--javascript
--bootstrap
--figma
--git and github
+- vscode
+- html
+- css
+- javascript
+- bootstrap
+- figma
+- git and github
