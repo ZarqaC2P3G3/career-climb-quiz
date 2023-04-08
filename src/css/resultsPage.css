@@ -1,0 +1,40 @@
+body {
+  background-color: #eee;
+  background-image: url("../../img/background_image.jpg");
+  background-size: 100% 100%;
+}
+.results-card span {
+  font-size: 36px;
+  font-weight: 600;
+}
+.logoutButton{
+  background: transparent;
+                    border: solid 1px #0a89b8;
+                    color: #000000;
+}
+.logoutButton2{
+  background: transparent;
+                    border: solid 1px #0a89b8;
+                    color: #000000;
+}
+button.logoutButton2:hover{
+  color: rgb(0, 0, 0);
+  background-color: #328679cc;
+  border: solid 1px #000000;
+
+
+}
+button.logoutButton:hover{
+  color: rgb(0, 0, 0);
+  background-color: #c53638;
+  border: solid 1px #000000;
+
+
+}
+.resultcards:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor:context-menu;
+
+}

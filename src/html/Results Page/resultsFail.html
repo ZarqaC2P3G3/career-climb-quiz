@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./results_page.css">
+    <link rel="stylesheet" href="../../css/resultsPage.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Document</title>
 </head>
 
@@ -34,14 +35,16 @@
                             <a class="nav-link mx-4" href="#">Contact us</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-info mr-2 mx-4" style="
-                /* font-weight: bold; */
-                background: transparent;
-                border: solid 1px #0a89b8;
-                color: #444;
-              ">
-                        Logout
-                    </button>
+                    <a href="../../../index.html">
+
+                        <button class="btn  mr-2 mx-4 logoutButton" style="
+                    /* background: transparent;
+                    border: solid 2px #b80a0a;
+                    color: #444; */
+                  ">
+                            Logout
+                        </button>
+                    </a>
 
                 </div>
             </div>
@@ -49,22 +52,48 @@
     </header>
     <main>
         <div class="container rounded-4 p-4"
-            style=" background-color: rgba(255, 255, 255, 0.5);   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-            <div class="container  rounded-4 mt-3 p-5 d-flex justify-content-start"
-                style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 95%;height: 15rem; background-color: #328679;"><span
-                    style="position: relative ; bottom: 2vh; font-size: 10vh; font-weight:600; ">JavaScript <sub
-                        style=" font-size: 5vh; color: white;">Success</sub> </span></div>
+            style=" background-color: rgba(255, 255, 255, 0.5);  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+            <!-- <div data-aos="zoom-out" data-aos-duration="1000" class="container  rounded-4 mt-3 p-5 d-flex justify-content-start"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 95%;height: 15rem; background-color: #A21B1E;">
+                <span style="position: relative ; bottom: 2vh; font-size: 10vh; font-weight:600; ">JavaScript <sub
+                        style=" font-size: 5vh; color: white;">Fail</sub> </span>
+            </div>
             <p class="my-5" style="text-align: center;">This is a summary about the quiz that should go here here goes a
                 summary summary summary summary</p>
 
 
+            <div class=" row gap-4 results-card mx-3 justify-content-center">
+                <div  class="resultcards  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #4D0F0F ;color: white">Final Score<br> <br><span id="finalScore">
+                        22%</span></div>
+                <div  class="resultcards  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #A21B1E  ;color: white;">Time Spent <br> <br> <span> 5:23</span></div>
+                <div  class="resultcards  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #65B87E ; color: white;">Correct Answers <br> <br><span
+
+                        id="correctAnswers">2/10</span></div>
+
+                        id="correctAnswers">2/10</span></div> -->
+
+
+            <div  class="container  rounded-4 mt-3 p-5 d-flex justify-content-start"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 95%;height: 15rem; background-color: #A21B1E;"><span
+                
+                    style="position: relative ; bottom: 2vh; font-size: 10vh; font-weight:600; "><span id="position">Javascript</span> <sub
+                        style=" font-size: 5vh; color: white;">Fail</sub> </span></div>
+            <p class="my-5" style="text-align: center;" id="summary">This is a summary about the quiz that should go here here goes a
+                summary summary summary summary</p>
+
+
             <div class="row gap-4 results-card mx-3 justify-content-center">
-                <div data-aos="zoom-out" data-aos-duration="4000" class="  rounded-3 p-3 col-sm-12 col-lg-3" style="background-color: #0082AA ;color: white">Final
-                    Score<br> <br><span> 22%</span> </div>
-                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3" style="background-color: #328679  ;color: white;">Time
-                    Spent <br> <br> <span> 5:23</span></div>
-                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3" style="background-color: #65B87E ; color: white;">
-                    Correct Answers <br> <br><span>2/10 </span></div>
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #4D0F0F ;color: white">Final Score<br> <br><span id="finalScore"> 22%</span></div>
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #A21B1E  ;color: white;">Time Spent <br> <br> <span id="timeRemaning"></span></div>
+                <div data-aos="zoom-out" data-aos-duration="10000" class="  rounded-3 p-3 col-sm-12 col-lg-3"
+                    style="background-color: #65B87E ; color: white;">Correct Answers <br> <br><span id="correctAnswers">2/10</span></div>
+
             </div>
             <!-- -----------------------------------saaied -------------------------------------------- -->
 
@@ -75,7 +104,7 @@
             <div class="container-sm mt-5 rounded-4 mb-4 ">
                 <div class="accordion w-75 mx-auto" id="accordionExample">
                     <h2>Review answers</h2>
-                    <div class="accordion-item">
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -157,8 +186,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="card" style="width: 18rem;">
+        </div> -->
+                    <!-- <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
@@ -213,9 +242,9 @@
     <script src="https://kit.fontawesome.com/f834d0470b.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
-    <script src="./results_Page_sucsee.js"></script>
+    <script src="../../js/resultsPage.js"></script>
 </body>
 
 </html>

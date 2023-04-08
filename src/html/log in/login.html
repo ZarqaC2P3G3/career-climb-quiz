@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Climb Quiz -Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+  <section id="containerSection" class="vh-100 p-3 d-flex flex-column justify-content-center"
+    style="background-color: #d9e9f1">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 font-weight-bold">
+                    Login
+                  </p>
+
+                  <form class="mx-1 mx-md-4" id="form">
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example3c">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" />
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <label class="form-label" for="form3Example4c">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" />
+                      </div>
+                    </div>
+
+                    <!-- Choose the Quiz -->
+                    <div class="dropdown mb-5">
+                      <button class="btn dropdown-toggle w-100 mt-4 dropdownBtn" style="
+                            border: solid 1px #0a89b8;
+                            color: #0a89b8;
+                            background-color: white;
+                          " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Choose the Quiz
+                        <span id="chosenItem"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                          <a class="dropdown-item" data-value="javascript" href="#"
+                            onclick="updateButtonText('JavaScript')">JavaScript</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-value="css" onclick="updateButtonText('CSS')">CSS</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" data-value="html" href="#"
+                            onclick="updateButtonText('HTML')">HTML</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                      <a href="../welcome/welcomePage.html">
+                        <button type="submit" class="btn btn-info w-100" style="background-color: #0a89b8">
+                          Login
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="d-flex flex-column mb-5 align-items-center">
+                      <p class="small fw-bold mt-2 pt-1 mb-0">
+                        <a href="#" class="link-danger mt-2">Forgot Password?</a>
+                      </p>
+
+                      <p class="small fw-bold mt-2 pt-1 mb-0">
+                        Don't have an account?
+                        <a href="./signup.html" class="link-danger mt-2">Register</a>
+                      </p>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <img src="../../../img/login.png" class="img-fluid" alt="Sample image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function updateButtonText(text) {
+      document.querySelector(".dropdownBtn").innerHTML = text;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <script src="../../js/login.js"></script>
+  <!-- <script src="../../js/login.js"></script> -->
+</body>
+
+</html>

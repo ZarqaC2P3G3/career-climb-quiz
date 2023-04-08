@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+
+  <body>
+    <section
+      id="containerSection"
+      class="vh-100 p-3 d-flex flex-column justify-content-center"
+    >
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  ">
+              <div class="card-body p-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                      Join Us
+                    </p>
+
+                    <form id="signupForm" class="mx-1 mx-md-4">
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="textbox form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example1c"
+                            >Name</label
+                          >
+                          <input
+                            type="text"
+                            name="username"
+                            placeholder="Enter your name"
+                            id="form3Example1c"
+                            class="form-control"
+                          />
+                          <div id="nameError" style="display: none; color: red">
+                            Please enter a valid name
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example3c"
+                            >Email</label
+                          >
+                          <input
+                            type="text"
+                            name="email"
+                            placeholder="examle@mail.com"
+                            id="form3Example3c"
+                            class="form-control"
+                          />
+                          <div
+                            id="emailError"
+                            style="display: none; color: red"
+                          >
+                            Please enter a Email address
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <label class="form-label" for="form3Example4c"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            placeholder="Enter your password"
+                            name="password"
+                            id="form3Example4c"
+                            class="form-control"
+                          />
+                          <div
+                            id="passwordError"
+                            style="display: none; color: red"
+                          >
+                            Enter a password more than 8 characters <br />
+                            with at least 1 number <br />
+                            uppercase, and special characters
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Choose the Quiz -->
+                      <div class="dropdown mb-5">
+                        <button
+                          class="btn dropdown-toggle w-100 mt-4 dropdownBtn"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          Choose the Quiz
+                          <span id="chosenItem"></span>
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-value="javascript"
+                              href="#"
+                              onclick="updateButtonText('JavaScript')"
+                              >JavaScript</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-value="CSS"
+                              href="#"
+                              onclick="updateButtonText('CSS')"
+                              >CSS</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-value="HTML"
+                              href="#"
+                              onclick="updateButtonText('HTML')"
+                              >HTML</a
+                            >
+                          </li>
+                        </ul>
+                        <div
+                          id="positionError"
+                          style="display: none; color: red"
+                        >
+                          Please choose a position
+                        </div>
+                      </div>
+
+                      <div class="form-check d-flex flex-column mb-5">
+                        <input
+                          class="form-check-input me-2"
+                          type="checkbox"
+                          name="checked"
+                          value="Checked"
+                          id="checkbox"
+                        />
+                        <label
+                          style="display: block"
+                          class="form-check-label"
+                          for="checkbox"
+                        >
+                          I agree all statements in
+                          <a href="#!">Terms of service</a>
+                        </label>
+                        <div
+                          id="checkboxError"
+                          style="display: none; color: red"
+                        >
+                          Please accept the terms
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-column justify-content-center">
+                       <a href="../welcome/welcomePage.html">
+                        <button
+                        type="submit"
+                        class="btn btn-info w-100"
+                        style="background-color: #0a89b8"
+                      >
+                        Sign up
+                      </button>
+                       </a>
+                        
+                        <p class="small fw-bold mt-2 pt-1 mb-0 mx-auto">
+                          Already have an account?
+                          <a href="./login.html" class="link-danger mt-2"
+                            >Login</a
+                          >
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+                  >
+                    <img
+                      src="../../../img/login.png"
+                      class="img-fluid"
+                      alt="Sample image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function updateButtonText(text) {
+        document.querySelector(".dropdownBtn").innerHTML = text;
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../js/validation.js"></script>
+  </body>
+</html>
