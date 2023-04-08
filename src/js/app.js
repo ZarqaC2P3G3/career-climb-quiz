@@ -560,3 +560,4 @@ quiz.addEventListener("submit", (event) => {
 });
 
 document.getElementById("submitLink").addEventListener("click", (event) => {});
+
