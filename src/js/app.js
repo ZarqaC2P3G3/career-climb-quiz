@@ -591,9 +591,3 @@ quiz.addEventListener("submit", (event) => {
     currentQuestion++;
   }
 });
-<<<<<<< HEAD
-
-document.getElementById("submitLink").addEventListener("click", (event) => {});
-
-=======
->>>>>>> c5dd0fd1037c11178c2610a8db47528832797f5e
