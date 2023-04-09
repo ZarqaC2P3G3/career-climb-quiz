@@ -54,9 +54,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let correct;
     if (+questionData[index].questionAnswer === +userAnswers[index] - 1) {
       correct = true;
-      // console.log(+questionData[index].questionAnswer, +userAnswers[index]);
     } else {
-      // console.log(+questionData[index].questionAnswer, +userAnswers[index]);
       correct = false;
     }
 

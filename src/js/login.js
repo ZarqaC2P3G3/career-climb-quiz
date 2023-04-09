@@ -15,7 +15,6 @@ if (localStorage.getItem("users")) {
 dropdownItems.forEach((item) => {
   item.addEventListener("click", function () {
     selectedValue = this.getAttribute("data-value");
-    // console.log(selectedValue);
   });
 });
 
@@ -28,11 +27,8 @@ form.addEventListener("submit", function (e) {
 
   users.forEach((element) => {
     if (element.email == email && element.password == password) {
-      // window.location.href = "../welcome/welcomePage.html";
       username = element.name;
       valid = true;
-
-      //   console.log(typeof password);
     } else if (element.email == email && element.password != password) {
       emailExists = true;
     }
@@ -58,7 +54,6 @@ form.addEventListener("submit", function (e) {
     );
     window.location.href = "../welcome/welcomePage.html";
   }
- 
 
   form.reset();
 });
