@@ -6,24 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600&display=swap"
+    rel="stylesheet"
+  />
   <title>Career Climb Quiz - Your job is one quiz away.</title>
 </head>
 <style>
-   a {
+  a {
     color: white;
     text-decoration: none;
-  }
-
-  /* @media(max-width : 992px){
-    .drop-Shadow{
-    display: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     }
-  } */
 
 </style>
 <body>
-
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -45,7 +43,6 @@
             </li>
           </ul>
           <a href="../../../index.html">
-
             <button class="btn btn-outline-info mr-2 mx-4" style="
                 /* font-weight: bold; */
                 background: transparent;
@@ -55,61 +52,54 @@
               logout
             </button>
           </a>
-
         </div>
       </div>
     </nav>
   </header>
-  <!-- shadow-lg mb-5 bg-rounded -->
-  <!-- style="box-shadow: 10px 10px 10px 10px  rgb(246, 241, 177);" -->
   <main>
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6 position-relative">
           <img  id="quizImage" src="../../../img/javascript-logo-new.png"
             class="d-block mx-lg-auto img-fluid  w-50 h-50 " alt="Bootstrap Themes" width="150" height="500" loading="lazy" />
-            <!-- <div class="drop-Shadow position-absolute" style="box-shadow: 0 0 300px rgb(52,125,198); width: 150px; height: 150px; top: 10%;
-            left: 38%; z-index: -2;"></div> -->
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">
+          <h1 class="display-5 fw-bold lh-1 mb-3" style="font-family: 'Poppins', sans-serif;">
             <span> Welcome, <span id="userName">user</span>!</span>
             <br><br>
-            <h1 class="display-6 lh-1 mb-2">
+            <h1 class="display-6 lh-1 mb-2" style="font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            ">
               About <span id="position">javascript</span> quiz
             </h1>
-            <p class="lead mt-3" id="positionBrief">The JS Multiple Choice Quiz is a web-based platform designed to test your knowledge of
+            <p class="lead mt-3" id="positionBrief" style="font-family: 'Inter', sans-serif;
+            ">The JS Multiple Choice Quiz is a web-based platform designed to test your knowledge of
               JavaScript. The quiz features a series of multiple-choice questions, covering various topics such as
               syntax, data types, functions, and more. The questions range in difficulty from beginner to advanced,
               allowing users to test their skills at various levels.</p>
             <br>
-            <h1 class="display-6 lh-1 mb-2">
+            <h1 class="display-6 lh-1 fs-2 mb-2" style="font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            ">
               Quiz Estimated Time: 5 min.
             </h1>
             <br><br>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-
               <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 mt-3"
                 style="background: #0a89b8; color: white; font-size: 18px">
-
                 <a id="startQuiz" href="../Quiz Page/quizPage.html
                 "> Start Quiz</a>
-     
               </button>
             </div>
         </div>
       </div>
     </div>
   </main>
-
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
-
-        </a>
         <span class="mb-3 mb-md-0 text-body-secondary fw-bold">Career Climb Quiz</span>
       </div>
-
       <ul class="nav col-md-4 justify-content-center list-unstyled d-flex mx-auto ">
         <li class="ms-3">
           <a class="text-body-secondary" href="#"><ion-icon style="font-size: 28px" name="logo-twitter"></ion-icon></a>
@@ -136,7 +126,6 @@
       </div>
     </footer>
   </div>
-
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -145,5 +134,4 @@
   <script src="https://kit.fontawesome.com/f834d0470b.js" crossorigin="anonymous"></script>
   <script src="../../js/welcomePage.js"></script>
 </body>
-
 </html>

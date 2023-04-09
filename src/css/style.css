@@ -1,5 +1,6 @@
 body {
   background-color: #d9e9f1;
+  font-family: 'Inter', sans-serif;
 }
 
 #containerSection {
@@ -14,4 +15,9 @@ body {
 .dropdownBtn:hover {
   background-color: #0a89b8;
   color: white;
+}
+
+
+.form-check-label{
+  font-size: 15px;
 }
