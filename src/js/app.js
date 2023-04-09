@@ -424,7 +424,7 @@ quiz.addEventListener("submit", (event) => {
         .correctAnswer,
     questionAnswerText:
       quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
-        .answers[+event.target.exampleRadios.value],
+        .answers[+event.target.exampleRadios.value - 1],
   };
 
   if (currentQuestion !== 10) {
