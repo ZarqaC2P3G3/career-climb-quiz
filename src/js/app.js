@@ -137,12 +137,12 @@ const quizzes = {
         title:
           "Arrays in JavaScript are defined by which of the following statements?",
         answers: {
-          0: "It is an ordered list of values",
+          0: "It is an ordered list of string",
           1: "It is an ordered list of objects",
-          2: "It is an ordered list of string",
+          2: "It is an ordered list of values",
           3: "It is an ordered list of functions",
         },
-        correctAnswer: 0,
+        correctAnswer: 3,
       },
       {
         title:
