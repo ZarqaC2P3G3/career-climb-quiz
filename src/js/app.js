@@ -393,15 +393,6 @@ function calculateResult() {
   });
 }
 
-// signup.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   userInfo.userName = event.target.username;
-//   userInfo.userEmail = event.target.useremail;
-//   userInfo.userPassword = event.target.userpassword;
-//   userInfo.userPosition = event.target.userposition;
-// });
-
 if (currentQuestion === 0) {
   document.getElementById("questionTitle").textContent =
     quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion].title;
@@ -419,11 +410,6 @@ if (currentQuestion === 0) {
 quiz.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // if (currentQuestion === 0) {
-  //   return;
-  // }
-  // console.log(event.target.exampleRadios.value);
-
   event.target.exampleRadios.forEach((element) => (element.checked = false));
 
   answers[currentQuestion - 1] = +event.target.exampleRadios.value;
@@ -439,8 +425,6 @@ quiz.addEventListener("submit", (event) => {
         .answers[+event.target.exampleRadios.value],
   };
 
-  // console.log(currentQuestion);
-
   if (currentQuestion !== 10) {
     document.getElementById("questionTitle").textContent =
       quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion].title;
@@ -453,7 +437,6 @@ quiz.addEventListener("submit", (event) => {
     });
   }
 
-  // if (currentQuestion === 0) {
   document.getElementById("questionNumber").textContent = currentQuestion + 1;
   document.getElementById("progressBar").style.width = `${
     currentQuestion + 1
@@ -463,13 +446,9 @@ quiz.addEventListener("submit", (event) => {
     document.getElementById("nextButton").textContent = "Submit";
   }
 
-  console.log(answers, scoreData);
-
-  console.log(score);
   sessionStorage.setItem("userAnswers", JSON.stringify(answers));
   sessionStorage.setItem("questionData", JSON.stringify(scoreData));
   if (currentQuestion === 10) {
-    // document.getElementById("submitButton").classList.toggle("d-none");
     calculateResult();
     sessionStorage.setItem("score", `${score}`);
     if (score > 5) {
