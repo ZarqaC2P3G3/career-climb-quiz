@@ -84,7 +84,6 @@ form.addEventListener("submit", function (e) {
 
     window.location.href = "../welcome/welcomePage.html";
   } else if (valid && exists) {
-    // alert("User Already exists");
     Swal.fire({
       icon: "error",
       title: "Oops...",
