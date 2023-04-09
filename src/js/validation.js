@@ -83,12 +83,15 @@ form.addEventListener("submit", function (e) {
     sessionStorage.setItem("loggedInUser", JSON.stringify(usersInfo));
 
     window.location.href = "../welcome/welcomePage.html";
-  } else {
-    console.log(valid);
-
-    alert("User Already exists");
-    exists = false;
+  } else if (valid && exists) {
+    // alert("User Already exists");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "User Already exists",
+    });
   }
+
   form.reset();
 });
 
