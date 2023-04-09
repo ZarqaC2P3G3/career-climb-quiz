@@ -10,9 +10,9 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
 
-<body>
+<body     style="background-color: #d9e9f1;">
   <section id="containerSection" class="vh-100 p-3 d-flex flex-column justify-content-center"
-    style="background-color: #d9e9f1">
+>
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-12 col-xl-11">
@@ -23,7 +23,13 @@
                   <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 font-weight-bold">
                     Login
                   </p>
-
+                  <div
+                  id="emailPassError"
+                  style="display: none; color: red"
+                  class="container text-center"
+                >
+                  Email or password is not correct
+                </div>
                   <form class="mx-1 mx-md-4" id="form">
                     <div class="d-flex flex-row align-items-center mb-4">
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
@@ -65,6 +71,12 @@
                             onclick="updateButtonText('HTML')">HTML</a>
                         </li>
                       </ul>
+                      <div
+                          id="positionError"
+                          style="display: none; color: red"
+                        >
+                          Please choose a quiz
+                        </div>
                     </div>
 
                     <div class="d-flex justify-content-center">

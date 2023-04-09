@@ -1,5 +1,7 @@
 const form = document.getElementById("form");
 const dropdownItems = document.querySelectorAll(".dropdown-item");
+let positionError = document.getElementById("positionError");
+let emailpassError = document.getElementById("emailPassError");
 
 let users = [];
 let valid = false;
@@ -38,10 +40,14 @@ form.addEventListener("submit", function (e) {
     console.log(valid);
   });
   if (!valid && emailExists) {
-    alert("incorrect email or password");
+    emailpassError.style.display = "block";
   }
 
-  if (valid) {
+  if (!selectedValue) {
+    positionError.style.display = "block";
+  }
+
+  if (valid && selectedValue) {
     console.log(username, selectedValue);
     sessionStorage.setItem(
       "loggedInUser",
@@ -52,6 +58,7 @@ form.addEventListener("submit", function (e) {
     );
     window.location.href = "../welcome/welcomePage.html";
   }
+ 
 
   form.reset();
 });
