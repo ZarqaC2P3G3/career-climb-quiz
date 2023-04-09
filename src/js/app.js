@@ -7,7 +7,7 @@ const quizzes = {
       {
         title: "What is JavaScript?",
         answers: {
-          0: " JavaScript is a scripting language used to make the website interactive",
+          0: "JavaScript is a scripting language used to make the website interactive",
           1: "JavaScript is an assembly language used to make the website interactive",
           2: "JavaScript is a compiled language used to make the website interactive",
           3: "None of the mentioned",
@@ -47,7 +47,8 @@ const quizzes = {
         correctAnswer: 1,
       },
       {
-        title: " Which of the following object is the main entry point to all client-side JavaScript features and APIs?",
+        title:
+          " Which of the following object is the main entry point to all client-side JavaScript features and APIs?",
         answers: {
           0: "position",
           1: "window",
@@ -57,7 +58,8 @@ const quizzes = {
         correctAnswer: 1,
       },
       {
-        title: "Which of the following methods/operation does javascript use instead of == and !=?",
+        title:
+          "Which of the following methods/operation does javascript use instead of == and !=?",
         answers: {
           0: "JavaScript uses equalto()",
           1: "JavaScript uses equals() and notequals() instead",
@@ -77,7 +79,8 @@ const quizzes = {
         correctAnswer: 2,
       },
       {
-        title: " Which of the following is the property that is triggered in response to JS errors?",
+        title:
+          " Which of the following is the property that is triggered in response to JS errors?",
         answers: {
           0: "onclick",
           1: "onerror",
@@ -137,17 +140,17 @@ const quizzes = {
           0: "HyperText Markup Language",
           1: "HyperText Machine Language",
           2: "HyperText Marking Language",
-          3: " HighText Marking Language",
+          3: "HighText Marking Language",
         },
         correctAnswer: 0,
       },
       {
         title: "What is the correct syntax of doctype in HTML5?",
         answers: {
-          0: "</doctype html>",
-          1: "<doctype html>",
-          2: "<doctype html!>",
-          3: "<!doctype html>",
+          0: "/doctype html",
+          1: "doctype html",
+          2: "doctype html!",
+          3: "!doctype html",
         },
         correctAnswer: 3,
       },
@@ -178,8 +181,8 @@ const quizzes = {
           "Which of the following tag is used for inserting the largest heading in HTML?",
         answers: {
           0: "head",
-          1: "<h1>",
-          2: "<h6>",
+          1: "h1",
+          2: "h6",
           3: "heading",
         },
         correctAnswer: 1,
@@ -207,10 +210,10 @@ const quizzes = {
       {
         title: "Which element is used to get highlighted text in HTML5?",
         answers: {
-          0: "<u>",
-          1: "<mark>",
-          2: "<highlight>",
-          3: "<b>",
+          0: "u",
+          1: "mark",
+          2: "highlight",
+          3: "b",
         },
         correctAnswer: 1,
       },
