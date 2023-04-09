@@ -413,9 +413,8 @@ if (currentQuestion === 0) {
 quiz.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  event.target.exampleRadios.forEach((element) => (element.checked = false));
-
   answers[currentQuestion - 1] = +event.target.exampleRadios.value;
+
   scoreData[currentQuestion - 1] = {
     questionTitle:
       quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
@@ -448,6 +447,8 @@ quiz.addEventListener("submit", (event) => {
   if (currentQuestion === 9) {
     document.getElementById("nextButton").textContent = "Submit";
   }
+
+  event.target.exampleRadios.forEach((element) => (element.checked = false));
 
   sessionStorage.setItem("userAnswers", JSON.stringify(answers));
   sessionStorage.setItem("questionData", JSON.stringify(scoreData));
