@@ -90,6 +90,7 @@ form.addEventListener("submit", function (e) {
       title: "Oops...",
       text: "User Already exists",
     });
+    exists = false;
   }
 
   form.reset();
