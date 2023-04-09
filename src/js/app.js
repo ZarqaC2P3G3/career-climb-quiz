@@ -1,115 +1,6 @@
 const signup = document.getElementById("signup");
 const quiz = document.getElementById("quiz");
 
-// const quizzes = {
-//   javascriptQuiz: {
-//     questions: [
-//       {
-//         title: "What is JavaScript?",
-//         answers: {
-//           0: " JavaScript is a scripting language used to make the website interactive",
-//           1: "JavaScript is an assembly language used to make the website interactive",
-//           2: "JavaScript is a compiled language used to make the website interactive",
-//           3: "None of the mentioned",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title:
-//           "Arrays in JavaScript are defined by which of the following statements?",
-//         answers: {
-//           0: "It is an ordered list of values",
-//           1: "It is an ordered list of objects",
-//           2: "It is an ordered list of string",
-//           3: "It is an ordered list of functions",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title:
-//           "Where is Client-side JavaScript code is embedded within HTML documents?",
-//         answers: {
-//           0: "A URL that uses the special javascript:code",
-//           1: "A URL that uses the special javascript:protocol",
-//           2: "A URL that uses the special javascript:encoding",
-//           3: "A URL that uses the special javascript:stack",
-//         },
-//         correctAnswer: 1,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//       {
-//         title: "Which of the following is correct about JavaScript?",
-//         answers: {
-//           0: "JavaScript is an Object-Based language",
-//           1: "JavaScript is Assembly-language",
-//           2: "JavaScript is an Object-Oriented language",
-//           3: " JavaScript is a High-level language",
-//         },
-//         correctAnswer: 0,
-//       },
-//     ],
-//   },
-// };
-
 const quizzes = {
   javascriptQuiz: {
     questions: [
@@ -341,16 +232,16 @@ const quizzes = {
       {
         title: "Which of the following tag is used to embed css in html page?",
         answers: {
-          0: "<css>",
-          1: "<!DOCTYPE html>",
-          2: "<script>",
-          3: "<style>",
+          0: "css",
+          1: "!DOCTYPE html",
+          2: "script",
+          3: "style",
         },
         correctAnswer: 3,
       },
       {
         title:
-          " Which of the following CSS selectors are used to specify a group of elements?",
+          "Which of the following CSS selectors are used to specify a group of elements?",
         answers: {
           0: "tag",
           1: "id",
@@ -396,10 +287,10 @@ const quizzes = {
         title:
           " Which of the following type of HTML tag is used to define an internal style sheet?",
         answers: {
-          0: "<script>",
-          1: "<Link>",
-          2: "<class>",
-          3: "<style>",
+          0: "script",
+          1: "Link",
+          2: "class",
+          3: "style",
         },
         correctAnswer: 3,
       },
@@ -429,10 +320,10 @@ const quizzes = {
         title:
           " Which of the following is the correct syntax to link an external style sheet in the HTML file?",
         answers: {
-          0: "<link rel=”stylesheet” href=”style.css” />",
-          1: "<link rel=”stylesheet” src=”style.css” />",
-          2: "<style rel=”stylesheet” src=”style.css” />",
-          3: "<style rel=”stylesheet” link=”style.css” />",
+          0: "link rel=”stylesheet” href=”style.css”",
+          1: "link rel=”stylesheet” src=”style.css” ",
+          2: "style rel=”stylesheet” src=”style.css” ",
+          3: "style rel=”stylesheet” link=”style.css” ",
         },
         correctAnswer: 0,
       },
@@ -533,7 +424,7 @@ quiz.addEventListener("submit", (event) => {
   // }
   // console.log(event.target.exampleRadios.value);
 
-  // console.log(currentQuestion);
+  event.target.exampleRadios.forEach((element) => (element.checked = false));
 
   answers[currentQuestion - 1] = +event.target.exampleRadios.value;
   scoreData[currentQuestion - 1] = {
@@ -548,7 +439,7 @@ quiz.addEventListener("submit", (event) => {
         .answers[+event.target.exampleRadios.value],
   };
 
-  console.log(currentQuestion);
+  // console.log(currentQuestion);
 
   if (currentQuestion !== 10) {
     document.getElementById("questionTitle").textContent =
