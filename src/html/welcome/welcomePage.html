@@ -15,6 +15,12 @@
     text-decoration: none;
   }
 
+  /* @media(max-width : 992px){
+    .drop-Shadow{
+    display: none;
+    }
+  } */
+
 </style>
 <body>
 
@@ -59,9 +65,11 @@
   <main>
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img id="quizImage" style="box-shadow: 0 0 100px rgb(246, 241, 177);" src="../../../img/javascript-logo-new.png"
-            class="d-block mx-lg-auto img-fluid  " alt="Bootstrap Themes" width="150" height="500" loading="lazy" />
+        <div class="col-10 col-sm-8 col-lg-6 position-relative">
+          <img  id="quizImage" src="../../../img/javascript-logo-new.png"
+            class="d-block mx-lg-auto img-fluid  w-50 h-50 " alt="Bootstrap Themes" width="150" height="500" loading="lazy" />
+            <!-- <div class="drop-Shadow position-absolute" style="box-shadow: 0 0 300px rgb(52,125,198); width: 150px; height: 150px; top: 10%;
+            left: 38%; z-index: -2;"></div> -->
         </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3">
