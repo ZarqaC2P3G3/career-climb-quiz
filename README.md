@@ -8,7 +8,7 @@ Career Climb Quiz a quiz website that will evaluate candidates' knowledge and sk
 
 ## mockup and wireframe
 
-[mockup and wireframe]("https://www.figma.com/file/TUOIMfyykxu4TbZQvcAfbL/CCQ---wireframe%2Fmockup?node-id=25-58&t=a62CkK0AIr56uQl5-0")
+[mockup and wireframe](https://www.figma.com/file/TUOIMfyykxu4TbZQvcAfbL/CCQ---wireframe%2Fmockup?node-id=25-58&t=a62CkK0AIr56uQl5-0)
 
 ## team members
 
