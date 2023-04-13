@@ -44,7 +44,7 @@ form.addEventListener("submit", function (e) {
   }
 
   if (valid && selectedValue) {
-    console.log(username, selectedValue);
+    // console.log(username, selectedValue);
     sessionStorage.setItem(
       "loggedInUser",
       JSON.stringify({
@@ -52,7 +52,16 @@ form.addEventListener("submit", function (e) {
         selectedValue: selectedValue,
       })
     );
-    window.location.href = "../welcome/welcomePage.html";
+    if (sessionStorage.getItem(`userAnswers${selectedValue}`)) {
+      const score = JSON.parse(sessionStorage.getItem(`score${selectedValue}`));
+      if (score > 5) {
+        window.location.href = "/src/html/Results Page/resultsSuccess.html";
+      } else {
+        window.location.href = "/src/html/Results Page/resultsFail.html";
+      }
+    } else {
+      window.location.href = "../welcome/welcomePage.html";
+    }
   }
 
   form.reset();

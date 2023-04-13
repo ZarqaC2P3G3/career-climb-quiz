@@ -418,6 +418,8 @@ if (currentQuestion === 0) {
 quiz.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // sessionStorage.setItem("");
+
   answers[currentQuestion - 1] = +event.target.exampleRadios.value;
 
   scoreData[currentQuestion - 1] = {
@@ -430,6 +432,12 @@ quiz.addEventListener("submit", (event) => {
     questionAnswerText:
       quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
         .answers[+event.target.exampleRadios.value - 1],
+    questionCorrectAnswerText:
+      quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
+        .answers[
+        quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
+          .correctAnswer
+      ],
   };
 
   if (currentQuestion !== 10) {
@@ -455,11 +463,18 @@ quiz.addEventListener("submit", (event) => {
 
   event.target.exampleRadios.forEach((element) => (element.checked = false));
 
-  sessionStorage.setItem("userAnswers", JSON.stringify(answers));
-  sessionStorage.setItem("questionData", JSON.stringify(scoreData));
+  sessionStorage.setItem(
+    `userAnswers${userInfo.userPosition}`,
+    JSON.stringify(answers)
+  );
+  sessionStorage.setItem(
+    `questionData${userInfo.userPosition}`,
+    JSON.stringify(scoreData)
+  );
+  // sessionStorage.setItem("userQuiz")
   if (currentQuestion === 10) {
     calculateResult();
-    sessionStorage.setItem("score", `${score}`);
+    sessionStorage.setItem(`score${userInfo.userPosition}`, `${score}`);
     if (score > 5) {
       window.location.href = "../Results Page/resultsSuccess.html";
     } else {
