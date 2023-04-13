@@ -1,6 +1,11 @@
 const signup = document.getElementById("signup");
 const quiz = document.getElementById("quiz");
 
+// const nameContainer = document.getElementById("fares");
+// nameContainer.style.backgroundColor = "red";
+
+// document.getElementById("fares").style.backgroundColor = "red";
+
 const quizzes = {
   javascriptQuiz: {
     questions: [
