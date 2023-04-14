@@ -20,6 +20,19 @@
     font-family: 'Inter', sans-serif;
 
   }
+  .logoutButton{
+  background: transparent;
+                    border: solid 1px #0a89b8;
+                    color: #000000;
+}
+button.logoutButton:hover{
+  color: rgb(0, 0, 0);
+  background-color: #0a89b8;
+  font-weight: 600;
+  border: solid 1px #000000;
+
+
+}
 </style>
 
 <body>
@@ -27,7 +40,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">CCQ</a>
+        <a class="navbar-brand" href="./index.html">CCQ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,7 +48,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active mx-4" aria-current="page" href="#">Home</a>
+              <a class="nav-link active mx-4" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-4" href="./src/html/about us and contact page/aboutUsPage.html">About us</a>
@@ -46,12 +59,7 @@
           </ul>
           <a href="./src/html/log in/login.html">
 
-            <button class="btn btn-outline-info mr-2 mx-4" style="
-                /* font-weight: bold; */
-                background: transparent;
-                border: solid 1px #0a89b8;
-                color: #444;
-              ">
+            <button class="btn btn-outline-info mr-2 mx-4 logoutButton" >
               Login
             </button>
           </a>
