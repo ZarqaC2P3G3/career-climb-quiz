@@ -4,6 +4,7 @@ let emailError = document.getElementById("emailError");
 let passwordError = document.getElementById("passwordError");
 let positionError = document.getElementById("positionError");
 let checkboxError = document.getElementById("checkboxError");
+let passwordConfirmError = document.getElementById("passwordConfirmError");
 let selectedValue;
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 let loggedInUser;
@@ -41,6 +42,14 @@ form.addEventListener("submit", function (e) {
     valid = false;
   } else {
     passwordError.style.display = "none";
+  }
+
+  const passwordConfirm = e.target["password-confirm"].value;
+  if (password !== passwordConfirm) {
+    passwordConfirmError.style.display = "block";
+    valid = false;
+  } else {
+    passwordConfirmError.style.display = "none";
   }
 
   const email = e.target.email.value;

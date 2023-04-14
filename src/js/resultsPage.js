@@ -1,26 +1,4 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const userScore = JSON.parse(sessionStorage.getItem("score"));
-  const userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-  const questionData = JSON.parse(sessionStorage.getItem("questionData"));
-  const answerReviewContainer = document.getElementById("accordionExample");
-
-  const answerReviewItem = `<div class="accordion-item">
-  <h2 class="accordion-header" id="headingOne">
-  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Question Number 1
-      </button>
-  </h2>
-  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-      data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-          <strong>Question Title</strong>
-          <br>
-          <span>Answer: b Answer body</span>
-      </div>
-  </div>
-</div>`;
-
   const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
 
   const userInfo = {
@@ -29,6 +7,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
     userPassword: "",
     userPosition: loggedInUser.selectedValue.toLowerCase(),
   };
+
+  const userScore = JSON.parse(
+    sessionStorage.getItem(`score${userInfo.userPosition}`)
+  );
+  const userAnswers = JSON.parse(
+    sessionStorage.getItem(`userAnswers${userInfo.userPosition}`)
+  );
+  const questionData = JSON.parse(
+    sessionStorage.getItem(`questionData${userInfo.userPosition}`)
+  );
+  const answerReviewContainer = document.getElementById("accordionExample");
+
+  // const answerReviewItem = `<div class="accordion-item">
+  // <h2 class="accordion-header" id="headingOne">
+  // <button class="accordion-button" type="button" data-bs-toggle="collapse"
+  //         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+  //         Question Number 1
+  //     </button>
+  // </h2>
+  // <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+  //     data-bs-parent="#accordionExample">
+  //     <div class="accordion-body">
+  //         <strong>Question Title</strong>
+  //         <br>
+  //         <span>Answer: b Answer body</span>
+  //     </div>
+  // </div>
+  // </div>`;
 
   const positionContainer = document.getElementById("position");
   const summaryContainer = document.getElementById("summary");
@@ -76,7 +82,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         <div class="accordion-body bg-${correct ? "success" : "danger"}">
             <strong>${element.questionTitle}</strong>
             <br>
-            <span>Answer: ${element.questionAnswerText}</span>
+            <span>User Answer: ${element.questionAnswerText}</span>
+            <br>
+            <span>Correct Answer: ${element.questionCorrectAnswerText}</span>
         </div>
     </div>
   </div>`;
